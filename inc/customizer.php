@@ -11,6 +11,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function alan21_customize_register( $wp_customize ) {
+	
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -31,6 +32,36 @@ function alan21_customize_register( $wp_customize ) {
 			)
 		);
 	}
+	
+	
+	/*ALAN21 CUSTOMIZER SETTINGS*/
+	$wp_customize->remove_section("colors");
+	$wp_customize->remove_section("background_image");
+	
+	$wp_customize->add_setting('blogdescription_2', array(
+		'default' 	=>	'',
+		'type'		=>	'option'
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'blogdescription_2', array(
+		'label' 	=>	__('Tagline 2', 'alan21'),  
+		'section'	=> 'title_tagline',
+		'settings'	=> 'blogdescription_2',
+		'priority'	=> 10
+	)));
+	
+	$wp_customize->add_setting('heroimage', array(
+		'default' 	=> 	'',
+		'type'		=>	'option'
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'heroimage', array(
+		'label' 	=>	__('Upload the hero image', 'alan21'),  
+		'section'	=> 'title_tagline',
+		'settings'	=> 'heroimage',
+		'priority'	=> 11
+	)));
+	
 }
 add_action( 'customize_register', 'alan21_customize_register' );
 

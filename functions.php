@@ -121,6 +121,8 @@ add_action( 'after_setup_theme', 'alan21_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
+ 
+ #CREATE EDITS
 function alan21_widgets_init() {
 	register_sidebar(
 		array(
@@ -154,7 +156,9 @@ add_action( 'wp_enqueue_scripts', 'alan21_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+ 
+#CONSIDER REMOVING
+#require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
