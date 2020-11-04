@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer class="site-footer">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'alan21' ) ); ?>">
 				<?php
@@ -25,8 +25,7 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'alan21' ), 'alan21', '<a href="http://www.google.ca">Alan Li</a>' );
 				?>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	</footer>
 
 <?php wp_footer(); ?>
 

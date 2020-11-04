@@ -23,16 +23,11 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'alan21' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header class="site-header">
 		
-			<?php the_custom_logo(); ?>
-			
-		</div><!-- .site-branding -->
-		
+		<?php the_custom_logo(); ?>
 		<?php get_sidebar(); ?>
-	
-	</header><!-- #masthead -->
+
+	</header>
