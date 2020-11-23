@@ -13,6 +13,15 @@
 	
 	<?php alan21_post_thumbnail(); ?>
 	
+	<a class="secondary-thumbnail" href="<?php echo esc_url(get_permalink())?>">
+		<?php if (class_exists('MultiPostThumbnails')) :
+			MultiPostThumbnails::the_post_thumbnail(
+				get_post_type(),
+				'secondary-image'
+			);
+		endif; ?>
+	</a>
+	
 	<header class="entry-header">
 		
 		<?php

@@ -11,13 +11,39 @@
 	display: none;
 }
 
+/*
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+*/
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+
+/* INDEX */
+
+section.feed .entry-header {
+	text-align: center;
+}
+
+section.feed .secondary-thumbnail::after, section.feed .post-thumbnail::after {
+	display: block;
+	position: relative;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+	margin-top: -150px;
+	height: 150px;
+	width: 100%;
+	content: '';
+}
+
+
+/* ARTICLE */
+
+main.single .entry-header {
+	text-align: center;
 }

@@ -18,3 +18,83 @@
 --------------------------------------------- */
 @import "elements/buttons";
 @import "elements/fields";
+
+
+/* Base Structure
+--------------------------------------------- */
+header .site-header {
+	padding: .5em 5% .5em;
+}
+
+section.masthead, section.feed, .entry-content {
+	width: 90%;
+	margin: 0 auto 0;
+}
+
+section.feed .entry-header {
+	position: relative;
+	top: -4em;
+	margin: 0 auto -3em;
+	width: 90%;
+}
+
+main.single .entry-header {
+	position: relative;
+	top: -4em;
+	margin: 0 auto;
+	width: 50%;
+}
+
+.secondary-thumbnail {
+	display: none;
+}
+
+main.single .post-thumbnail {
+	width: 80%;
+	margin: 1em auto 0;
+}
+
+@media (min-width: 768px) {
+	
+	header.site-header {
+		padding: .5em 20% .5em;
+	}	
+
+	section.masthead {
+		width: 25%;
+		margin: 0 0 0 20%;
+	}
+
+	.heroimage {
+		position: absolute;
+		left: 45%;
+		z-index: -1;
+	}
+	
+	section.feed {
+		width: 60%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	section.feed .post-thumbnail {
+		display: none;
+	}
+	
+	section.feed .secondary-thumbnail {
+		display: inline;
+	}
+
+	section.feed h2 {
+		flex-basis: 100%;
+	}
+	
+	section.feed article {
+		flex-basis: 30%;
+	}
+
+	.entry-content {
+		width: 50%;
+	}
+}

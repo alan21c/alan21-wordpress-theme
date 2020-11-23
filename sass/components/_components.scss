@@ -25,3 +25,23 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+/* Header and footer
+--------------------------------------------- */
+
+header.site-header {
+	position: sticky;
+	top: 0;
+	height: 3em; /* CONSIDER ADJUSTING */
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background: black;
+}
+
+header .custom-logo, header .custom-logo-link {
+	height: 100%;
+	width: auto;
+}

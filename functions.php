@@ -47,6 +47,16 @@ if ( ! function_exists( 'alan21_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		if (class_exists('MultiPostThumbnails')) {
+			new MultiPostThumbnails(
+				array(
+					'label' => __( 'Secondary Image', 'alan21'),
+					'id' => 'secondary-image',
+					'post_type' => 'post'
+				)
+			);
+		}
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
