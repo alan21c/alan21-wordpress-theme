@@ -25,7 +25,7 @@ get_header();
 					<img class="heroimage" src=<?php echo $alan21_heroimage; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<?php endif; ?>
 		
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 		
 			<?php
 				$alan21_tagline1 = get_bloginfo( 'description', 'display' );

@@ -6,3 +6,26 @@ h5,
 h6 {
 	clear: both;
 }
+
+h1 {
+	font-size: 2.8em;
+}
+
+h1.site-title {
+	color: $color__link;
+	font-size: 2.2em;
+	font-family: $font__serif;
+}
+
+@media screen and (min-width: $size__tablet) {
+
+	h1.site-title {
+		font-size: 1.8em;
+		font-family: $font__serif;
+	}
+	
+}
+
+h2 {
+	font-size: 2.2em;
+}

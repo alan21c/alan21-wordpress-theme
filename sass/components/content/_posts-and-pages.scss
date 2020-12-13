@@ -27,20 +27,36 @@
 
 /* INDEX */
 
+section.masthead {
+	text-align: center;
+}
+
+section.masthead .site-title {
+	display: inline;
+	padding: .2em 1em;
+	
+	border: 1px solid $color__link;
+	border-radius: 4px;
+}
+
+section.feed article {
+	background-color: white;
+}
+
+section.feed img {
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+	mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
 section.feed .entry-header {
 	text-align: center;
 }
 
-section.feed .secondary-thumbnail::after, section.feed .post-thumbnail::after {
-	display: block;
-	position: relative;
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
-	margin-top: -150px;
-	height: 150px;
-	width: 100%;
-	content: '';
+@media (min-width: $size__tablet) {
+	section.masthead {
+		text-align: left;
+	}	
 }
-
 
 /* ARTICLE */
 

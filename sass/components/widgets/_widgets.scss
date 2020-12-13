@@ -9,6 +9,26 @@
 
 /* MAILCHIMP */
 
-#mc4wp_form_widget-5 {
+#mc4wp_form_widget-5, #mc4wp_form_widget-3 {
 	margin: 0;
 }
+
+#mc4wp_form_widget-3 input {
+	@include font-size(.5);
+}
+
+#mc4wp_form_widget-3 input[type="email"] {
+	width: 150px;
+}
+
+@media screen and (min-width: $size__tablet) {
+	#mc4wp_form_widget-3 input {
+		@include font-size(.6);
+	}
+	
+	#mc4wp_form_widget-3 input[type="email"] {
+		width: 220px;
+	}
+}
+
+
